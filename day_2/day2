@@ -1,0 +1,53 @@
+# print("Hello"[4])
+# num_char = len(input("What's your name? "))
+# new_num_char = str(num_char)
+# print("Your name contains " + new_num_char + " characters.")
+
+# a = float(1234)
+# print(type(a))
+
+# print(70 + float(123.5))
+# print(str(70) + str(123.5))
+
+# two_digit_number = input("Type a two digit number: ")
+
+# sum_digits = int(two_digit_number[0]) + int(two_digit_number[1]) 
+
+# print(sum_digits)
+
+# print(3 * 3 + 3 / 3 - 3)
+# print(3 * (3 + 3)/3 - 3)
+
+# BMI Calculator :
+# weight = float(input("enter your weight in Kg : "))
+# height = float(input("enter your height in m: "))
+
+# BMI = int(weight / (height*height)) 
+
+# print(f"your BMI IS : {BMI} .")
+
+# print(round(8/3 , 2))
+
+# print(8//3)
+# print(type(8/3))
+# print(type(8//3))
+
+# result = 4 / 2
+# result /=2 
+# print(result)
+
+# score = 0 
+# height = 1.8
+# isWinning = True
+# # f_string
+# print(f"Your score is {score}, Your height is {height}, You are Winning is {isWinning}")
+
+# age = int(input("What is your Current age? "))
+
+# age_remain = 90 - age 
+
+# months_calc =  age_remain * 12
+# weeks_calc = age_remain * 52
+# days_calc = age_remain * 365
+
+# print(f"You have  {days_calc} days, {weeks_calc} days and {months_calc} months left")
