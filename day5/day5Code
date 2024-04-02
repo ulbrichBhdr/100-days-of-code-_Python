@@ -1,0 +1,126 @@
+# fruits = ["Apple", "Peach", "Pear"]
+# for fruit in fruits:
+#   print(fruit)
+#   print(fruit + " Pie")
+# print(fruits)
+# ..........................................................................................................
+# import math
+
+# student_heights = input("Input a list of student heights :").split()
+# for n in range(0, len(student_heights)) :
+#   student_heights[n] = int(student_heights[n])
+# print(student_heights)
+
+# total_height = sum(student_heights)
+# number_of_students = len(student_heights)
+# average_height = round(total_height / number_of_students)
+# print(average_height)
+# ..........................................................................................................
+# import math
+
+# student_heights = input("Input a list of student heights : ").split()
+# for n in range(0, len(student_heights)) :
+#   student_heights[n] = int(student_heights[n])
+# print(student_heights)
+
+# new_list = []
+# summation = 0
+# member = 0
+# for h in student_heights :
+#   summation += h
+#   new_list = h
+#   member += 1
+
+# print(summation)
+# print(member)
+
+# avg = round(summation / member)
+# print(avg)
+# .......................................................................................................
+# student_heights = input("Input a list of student heights : ").split()
+# for n in range(0, len(student_heights)) :
+#   student_heights[n] = int(student_heights[n])
+# print(student_heights)
+
+# total_height = 0
+# for height in student_heights :
+#   total_height += height
+
+# number_of_students = 0 
+# for height in student_heights:
+#   number_of_students += 1
+# ........................................................................................................
+# student_scores = input("Input a list of student scores : ").split()
+# for n in range(0, len(student_scores)):
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+
+# for n in student_scores :
+#   maximum_score = student_scores[0]
+#   if student_scores[n] > maximum_score :
+#     maximum_score = student_scores
+
+# print(maximum_score)
+# ...................................................................................................
+# student_scores = input("Input a list of student scores : ").split()
+# for n in range(0, len(student_scores)) :
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+
+# highest_score = 0
+# for score in student_scores :
+#   if score > highest_score :
+#     highest_score = score
+
+# print(f"The highest score in the class is : {highest_score}")
+# ................................................................................................
+# student_scores = input("Input a list of student scores : ").split()
+# for n in range(0, len(student_scores)) :
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+
+# lowest_score = student_scores[0]
+# for score in student_scores :
+#   if score < lowest_score :
+#     lowest_score = score
+
+# print(f"The highest score in the class is : {lowest_score}")
+# ..............................................................................................
+# student_scores = input("Input a list of student scores : ").split()
+# for n in range(0, len(student_scores)) :
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+
+# highest_score = student_scores[0]
+# for score in student_scores :
+#   if score > highest_score :
+#     highest_score = score
+
+# print(f"The highest score in the class is : {highest_score}")
+# ...............................................................................................
+# total = 0
+# for number in range(1, 101):
+#   total += number
+# print(total)
+# '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# total_even_number = 0 
+# for number in range(1, 101) :
+#   if number % 2 == 0 :
+#     total_even_number += number
+# print(total_even_number)
+# ...............................................................................................
+# total = 0
+# for number in range(2, 101, 2) :
+#   total += number
+# print(total)
+# .............................................................................................
+
+for n in range(1 , 101):
+  if n % 3 == 0 and n % 5 == 0 :
+    print("FizzBuzz")
+  elif n % 5 == 0 :
+    print("Buzz")
+  elif n % 3 == 0 :
+    print("Fizz")
+  else :
+    print(n)
