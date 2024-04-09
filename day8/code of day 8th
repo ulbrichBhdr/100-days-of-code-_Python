@@ -1,0 +1,220 @@
+# def greet():
+#    print("a")
+#    print("b")
+#    print("c")
+
+# greet()
+# ...............................................
+# def greet_with_name(name) :
+#   print(f"Hello {name}")
+#   print(f"How do you do {name} ?")
+
+# greet_with_name("Angela")
+# .............................................
+# def greet_with(name, location):
+#   print(f"Hello {name}")
+#   print(f"What is it like in {location}")
+
+# greet_with("Bahador", "Tehran")
+# .............................................
+# def greet_with(name, location):
+#   print(f"Hello {name}")
+#   print(f"What is it like in {location}")
+
+# greet_with(location="Nowhere", name="Jack Bauer")
+# ..................................................
+# import math
+# def paint_calc(height, width, cover) :
+#   number_of_can = math.ceil((height * width) / cover)
+#   print(f"You'll need{number_of_can} cans of paint.")
+  
+
+# test_h =int(input("Height of wall: "))
+# test_w =int(input("Width of wall: "))
+# coverage = 5
+# paint_calc(height=test_h, width=test_w, cover=coverage)
+# ...................................................
+# def prime_checker(number):
+#   if number == 1 :
+#     print(f"Your number {number} is not a prime")
+#   else :
+#     if number == 2 or number == 3:
+#       print(f"Your number {number} is a prime.")
+#     for number in range(3,101):
+#       if number % 2 == 0 :
+#         print(f"Your number {number} is not a prime")
+#       else :
+#         i = 3
+#         for number in range(4,101):
+#           if number % i == 0:
+#             print(f"Your number {number} is not a prime")
+#             i +=2 
+#           else :
+#             print(f"Your number {number} is a prime.")
+      
+
+# n = int(input("Check this number: "))
+# prime_checker(number=n)
+# ......................................................
+# def prime_checker(number):
+#   is_prime = True
+#   for i in range(2, number) :
+#     if number % i == 0:
+#       is_prime = False
+#   if is_prime:
+#     print("It's a prime number.")
+#   else:
+#     print("It's not a prime number.")
+
+# n = int(input("Check this number: "))
+# prime_checker(number=n)
+# ................................................
+# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+# def encrypt(plain_text, shift_amount) :
+#   cipher_text = ""
+#   for letter in plain_text :
+#     position = alphabet.index(letter)
+#     new_position = position + shift_amount
+#     new_letter = alphabet[new_position]
+#     cipher_text += new_letter
+#   print(f"The encoded text is {cipher_text}")
+
+# encrypt(plain_text=text, shift_amount=shift)
+# ............................................................
+# Solution number 2 :
+
+# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+
+
+# def encrypt(plain_text, shift_amount) :
+#     cipher_text = ""
+#     for letter in plain_text :
+#         if letter in alphabet:
+#             position = alphabet.index(letter)
+#             new_position = (position + shift_amount) % 26  # Using modular arithmetic
+#             new_letter = alphabet[new_position]
+#             cipher_text += new_letter
+#         else:
+#             cipher_text += letter  # If the character is not in the alphabet, keep it unchanged
+#     print("The encoded text is:", cipher_text)
+
+# encrypt(plain_text=text, shift_amount=shift)
+
+# def decrypt(plain_text2, shift_amount2) :
+#     decrypt_text = ""
+#     for letter in plain_text :
+#         position = alphabet.index(letter)
+#         new_position = (position - shift_amount) % 26
+#         new_letter = alphabet[new_position]
+#         decrypt_text += new_letter
+
+#     print(f"The decoded text is : {decrypt}")
+
+# decrypt(plain_text2=text, shift_amount2=shift)
+
+# if direction == "enctypt" :
+#     encrypt(plain_text=text, shift_amount=shift)
+# else :
+#     decrypt(plain_text2=text, shift_amount2=shift)
+
+# ............................................................
+
+# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+
+# def encrypt(plain_text, shift_amount):
+#     cipher_text = ""
+#     for letter in plain_text:
+#         if letter in alphabet:
+#             position = alphabet.index(letter)
+#             new_position = (position + shift_amount) % 26  # Using modular arithmetic
+#             new_letter = alphabet[new_position]
+#             cipher_text += new_letter
+#         else:
+#             cipher_text += letter  # If the character is not in the alphabet, keep it unchanged
+#     print("The encoded text is:", cipher_text)
+
+
+# def decrypt(plain_text, shift_amount):
+#     decrypt_text = ""
+#     for letter in plain_text:
+#         if letter in alphabet:
+#             position = alphabet.index(letter)
+#             new_position = (position - shift_amount) % 26
+#             new_letter = alphabet[new_position]
+#             decrypt_text += new_letter
+#         else:
+#             decrypt_text += letter  # If the character is not in the alphabet, keep it unchanged
+#     return decrypt_text
+
+
+# if direction == "encode":
+#     encrypt(plain_text=text, shift_amount=shift)
+# elif direction == "decode":
+#     decoded_message = decrypt(plain_text=text, shift_amount=shift)
+#     print(f"The decoded text is: {decoded_message}")
+# else:
+    # print("Invalid direction entered.")
+# ............................................................
+# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+
+# def encrypt(plain_text, shift_amount) :
+#   cipher_text = ""
+#   for letter in plain_text :
+#     position = alphabet.index(letter)
+#     new_position = position + shift_amount
+#     cipher_text += alphabet[new_position]
+#   print(f"The encoded text is {cipher_text}")
+
+# encrypt(plain_text=text, shift_amount=shift)
+
+# def decrypt(cipher_text, shift_amount):
+#   plain_text = ""
+#   for letter in cipher_text:
+#     position = alphabet.index(letter)
+#     new_position = position - shift_amount
+#     plain_text += alphabet[new_position]
+#   print(f"The decoded text is {plain_text}")
+
+# if direction == "encode" :
+#   encrypt(plain_text=text, shift_amount=shift)
+# elif direction == "decode":
+#   decrypt(cipher_text=text, shift_amount=shift)
+# ........................................................
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+def caesar(start_text, shift_amount, cipher_direction) :
+  end_text = ""
+  if cipher_direction == "decode" :
+    shift_amount *= -1
+  for letter in start_text:
+    position = alphabet.index(letter)
+    new_position = position + shift_amount
+    end_text += alphabet[new_position]
+  print(f"The {cipher_direction}d text is {end_text}")
+
+caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+
